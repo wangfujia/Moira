@@ -1,0 +1,6 @@
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\bin\Debug\Moira.Service.exe.config
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\bin\Debug\Moira.Service.exe
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\bin\Debug\Moira.Service.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\obj\Debug\Moira Service.csprojResolveAssemblyReference.cache
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\obj\Debug\Moira.Service.exe
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Files Dispatcher Service\obj\Debug\Moira.Service.pdb

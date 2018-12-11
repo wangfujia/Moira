@@ -1,0 +1,13 @@
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Moira.Actions.Custom.dll
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Moira.Actions.Custom.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Moira.Core.dll
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Fx.Elements.FileTags.dll
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Fx.Utilities.Encoder.dll
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Moira.Core.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Fx.Elements.FileTags.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\bin\Debug\BAFactory.Fx.Utilities.Encoder.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\obj\Debug\BAFactory.Moira.Actions.Custom.dll
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\obj\Debug\BAFactory.Moira.Actions.Custom.pdb
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\obj\Debug\Custom Actions.csprojAssemblyReference.cache
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\obj\Debug\Custom Actions.csproj.CoreCompileInputs.cache
+D:\Development\tfs.codeplex.com\moira\Moira Project Source Code\Custom Actions Test\obj\Debug\Custom Actions.csproj.CopyComplete

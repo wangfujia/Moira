@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration
+  xmlns="http://BAFactory.net/schemas/FilesDispatcher"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://BAFactory.net/schemas/ FilesDispatcher.xsd">
+  <Assemblies>
+    <Steps>
+      <Step Type="Copy" Class="BAFactory.Moira.Steps.Copy" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0" />
+      <Step Type="Move" Class="BAFactory.Moira.Steps.Move" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0" />
+      <Step Type="CreateFolder" Class="BAFactory.Moira.Steps.CreateFolder" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0" />
+    </Steps>
+    <FileAnalyzers>
+      <FileAnalyzer Type="ExifTags" Class="BAFactory.Moira.FileAnalyzers.ExifTagFileAnalyzer" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0"  />
+      <FileAnalyzer Type="FileAttribute" Class="BAFactory.Moira.FileAnalyzers.AttributesFileAnalyzer" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0"  />
+      <FileAnalyzer Type="WpFileName" Class="BAFactory.Moira.FileAnalyzers.WpVideoNameAnalyzer" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0"  />
+    </FileAnalyzers>
+    <LogProvider Type="TextFileLog" Class="BAFactory.Moira.Core.Log.TextFileLogProvider" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0" />
+    <Dispatcher Type="AsyncDispatcher" Class="BAFactory.Moira.Core.AsyncDispatcher" Assembly="BAFactory.Moira.Core" PublicKeyToken="null" Culture="neutral" Version="1.0.0.0" />
+  </Assemblies>
+
+  <Tasks>
+    <Task id="OrderPictures" enabled="true" runonstartup="true">
+      <BaseDirectory>
+        <Path><![CDATA[d:\temp]]></Path>
+        <Pattern isRegEx="false"><![CDATA[*.mov]]></Pattern>
+        <Interval>10</Interval>
+      </BaseDirectory>
+      <StepsGroups>
+        <StepsGroup id="ByDateAquired" enabled="true" breakcondition="OnSuccess">
+          <Step Type="CreateFolder" id="CreateFolderByDateAquired" breakcondition="OnError">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="FullDirectoryName" analyzer="ExifTags" attributeName="DateTime" attributeType="System.DateTime" ><![CDATA[d:\temp\{yyyy - MM - dd}]]></Parameter>
+            </Parameters>
+          </Step >
+          <Step Type="Move" id="MoveFileByDateTaken">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="DestinationPath" fromLastResult="true"></Parameter>
+            </Parameters>
+          </Step >
+        </StepsGroup>
+        <StepsGroup id="ByDateTaken" enabled="true" breakcondition="OnSuccess">
+          <Step Type="CreateFolder" id="CreateFolderByDateTaken" breakcondition="OnError">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="FullDirectoryName" analyzer="ExifTags" attributeName="DateTimeOriginal" attributeType="System.DateTime" ><![CDATA[d:\temp\{yyyy - MM - dd}]]></Parameter>
+            </Parameters>
+          </Step >
+          <Step Type="Move" id="MoveFileByDateTaken">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="DestinationPath" fromLastResult="true"></Parameter>
+            </Parameters>
+          </Step >
+        </StepsGroup>
+        <StepsGroup id="ByDateModified" enabled="true" breakcondition="OnSuccess">
+          <Step Type="CreateFolder" id="CreateFolderByDateModified" breakcondition="OnError">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="FullDirectoryName" analyzer="FileAttribute" attributeName="LastWriteTime" attributeType="System.DateTime" ><![CDATA[d:\temp\{yyyy - MM - dd}]]></Parameter>
+            </Parameters>
+          </Step >
+          <Step Type="Move" id="MoveFileByDateModified">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="DestinationPath" fromLastResult="true"></Parameter>
+            </Parameters>
+          </Step >
+        </StepsGroup >
+        <StepsGroup id="ByWpFileName" enabled="true" breakcondition="OnSuccess">
+          <Step Type="CreateFolder" id="CreateFolderByDateModified" breakcondition="OnError">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="FullDirectoryName" analyzer="WpFileName" attributeName="Name" attributeType="System.DateTime" ><![CDATA[d:\temp\{yyyy - MM - dd}]]></Parameter>
+            </Parameters>
+          </Step >
+          <Step Type="Move" id="MoveFileByWpFileName">
+            <Pattern isRegEx="false"><![CDATA[*.*]]></Pattern>
+            <Parameters>
+              <Parameter name="DestinationPath" fromLastResult="true"></Parameter>
+            </Parameters>
+          </Step >
+        </StepsGroup >
+      </StepsGroups>
+    </Task>
+  </Tasks>
+</Configuration>

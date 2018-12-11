@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FilesDispatcherConfiguration"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://BAFactory.net/schemas/FilesDispatcher/"
+    targetNamespace="http://BAFactory.net/schemas/FilesDispatcher/"
+>
+
+  <xs:complexType name="AssemblyInfoElement">
+    <xs:attribute name="Type" type="xs:string"  use="required" />
+    <xs:attribute name="Class" type="xs:string"  use="required"/>
+    <xs:attribute name="Assembly" type="xs:string"  use="required"/>
+    <xs:attribute name="PublicKeyToken" type="xs:string" />
+    <xs:attribute name="Culture" type="xs:string" />
+    <xs:attribute name="Version" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="PatternElement">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="IsRegEx" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name ="ParameterElement">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" />
+        <xs:attribute name="Analyzer" />
+        <xs:attribute name="AttributeName" />
+        <xs:attribute name="AttributeType" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:element name="Configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Assemblies" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Steps">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Step" type="AssemblyInfoElement" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FileAnalyzers">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Step"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LogProvider" type="AssemblyInfoElement" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tasks" minOccurs="1" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BaseDirectory" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Path" type="xs:string" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="Pattern"  type="PatternElement" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="Interval" type="xs:unsignedLong" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="StepsGroups" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="StepsGroup">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="Step" minOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Pattern" type="PatternElement" minOccurs="1" maxOccurs="1"/>
+                                <xs:element name="Parameters" minOccurs="1" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="Parameter" type="ParameterElement" />
+                                    </xs:all>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Id" type="xs:string" use="required" />
+            <xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+            <xs:attribute name="RunOnStartUp" type="xs:boolean" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

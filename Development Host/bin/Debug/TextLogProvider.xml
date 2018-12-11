@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TextLogProvider  
+  xmlns="http://BAFactory.net/schemas/TextLogProvider"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://BAFactory.net/schemas/ TextLogProvider.xsd">
+
+  <Level>Info</Level>
+  <FilePath>./log/FilesDispatcherLog.txt</FilePath>
+  <RotateOption>OnSizeInBytes</RotateOption>
+  <RotateLimit>1048576</RotateLimit>
+  <MaxFiles>5</MaxFiles>
+</TextLogProvider>

@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moira Service", "Files Dispatcher Service\Moira Service.csproj", "{62B865C8-D676-4EC3-8739-2D5A937D2D5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Actions", "Custom Actions Test\Custom Actions.csproj", "{B804C8B7-92D0-4B6F-84CF-42B90F013F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moira", "Development Host\Moira.csproj", "{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E38F8B97-3DFA-468C-B49F-B2D4904EFD55}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs05
+		SccProjectUniqueName0 = Files\u0020Dispatcher\u0020Service\\Moira\u0020Service.csproj
+		SccProjectName0 = Files\u0020Dispatcher\u0020Service
+		SccAuxPath0 = https://tfs.codeplex.com/tfs/tfs05
+		SccLocalPath0 = Files\u0020Dispatcher\u0020Service
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Core\\Core.csproj
+		SccProjectName1 = Core
+		SccAuxPath1 = https://tfs.codeplex.com/tfs/tfs05
+		SccLocalPath1 = Core
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Custom\u0020Actions\u0020Test\\Custom\u0020Actions.csproj
+		SccProjectName2 = Custom\u0020Actions\u0020Test
+		SccAuxPath2 = https://tfs.codeplex.com/tfs/tfs05
+		SccLocalPath2 = Custom\u0020Actions\u0020Test
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Development\u0020Host\\Moira.csproj
+		SccProjectName3 = Development\u0020Host
+		SccAuxPath3 = https://tfs.codeplex.com/tfs/tfs05
+		SccLocalPath3 = Development\u0020Host
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Debug|x86.ActiveCfg = Debug|x86
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Debug|x86.Build.0 = Debug|x86
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Release|x86.ActiveCfg = Release|x86
+		{62B865C8-D676-4EC3-8739-2D5A937D2D5B}.Release|x86.Build.0 = Release|x86
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Debug|x86.ActiveCfg = Debug|x86
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Debug|x86.Build.0 = Debug|x86
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Release|x86.ActiveCfg = Release|x86
+		{B804C8B7-92D0-4B6F-84CF-42B90F013F66}.Release|x86.Build.0 = Release|x86
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Debug|x86.ActiveCfg = Debug|x86
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Debug|x86.Build.0 = Debug|x86
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Release|x86.ActiveCfg = Release|x86
+		{9B8207D8-DC5F-4BD9-8CD1-E78018C0F55D}.Release|x86.Build.0 = Release|x86
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Debug|x86.ActiveCfg = Debug|x86
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Debug|x86.Build.0 = Debug|x86
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Release|x86.ActiveCfg = Release|x86
+		{A2747D1D-9E66-4823-918B-7BEBD8AE85F8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
